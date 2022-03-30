@@ -28,7 +28,7 @@ var (
 )
 
 func main() {
-	flag.StringVar(&listenAddr, "listen-addr", ":5000", "server listen address")
+	flag.StringVar(&listenAddr, "listen-addr", ":3000", "server listen address")
 	flag.Parse()
 
 	logger := log.New(os.Stdout, "http: ", log.LstdFlags)
