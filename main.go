@@ -111,14 +111,14 @@ func api() http.Handler {
 		const n = 5000000
 		count := 0
 
-		for i := 0; i < 10; i++ {
+		for i := 0; i < n; i++ {
 			count += i
 		}
 
 		w.Header().Set("Content-Type", "text/plain; charset=utf-8")
 		w.Header().Set("X-Content-Type-Options", "nosniff")
 		w.WriteHeader(http.StatusOK)
-		fmt.Fprintln(w, "API Count!")
+		fmt.Fprintln(w, "API Count!", count)
 	})
 }
 
